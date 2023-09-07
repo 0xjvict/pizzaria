@@ -10,7 +10,7 @@ use EventSauce\MessageRepository\IlluminateMessageRepository\IlluminateMessageRe
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Support\Facades\DB;
 
-abstract class IlluminateRepository extends EventSourcedAggregateRootRepository
+abstract class IlluminateAggregateRootRepository extends EventSourcedAggregateRootRepository
 {
     public function __construct(string $aggregateRootClassName, private readonly string $tableName)
     {
