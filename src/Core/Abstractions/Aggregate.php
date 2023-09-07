@@ -10,7 +10,7 @@ abstract class Aggregate implements EventSourcedAggregate
 {
     use AggregateAppliesKnownEvents;
 
-    public function __construct(private readonly EventRecorder $eventRecorder)
+    public function __construct(protected readonly EventRecorder $eventRecorder)
     {
     }
 }
